@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+.telefone{
+    width: 15px;
+}
+
+.email-icon{
+    width: 20px;
+}
+
+.relogio-icon{
+    width: 30px;
+}
+
 :root {
     --primary-blue: #002D5C;
     --dark-blue: #001a3a;
