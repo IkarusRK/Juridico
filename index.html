@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ribeiro Reis Advogados</title>
+    <meta name="description" content="Advogado Especialista em Concursos Públicos | Defesa do Concurseiro – Ribeiro Reis Advocacia. Atuação em todas as fases: recursos, mandados de segurança e garantia de posse.">
+    <meta name="keywords" content="advogado concurso público, advogado posse concurso, recurso discursiva concurso, mandado de segurança concurso, nomeação preterição, exclusão investigação social">
+    <title>Advogado Especialista em Concursos Públicos | Defesa do Concurseiro – Ribeiro Reis Advocacia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,45 +15,46 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📞</span>
-                        <span>(71) 94002-8922</span>
+                        <span>(71) 98765-4321</span>
                     </div>
                     <div class="contact-item">
                         <span>✉</span>
-                        <span>contato@ribeiroreisadvogados.com.br</span>
+                        <span>contato@ribeiroreis.adv.br</span>
                     </div>
                 </div>
-                <div>Atendimento: Seg - Sex, 9h às 18h</div>
+                <div>Atendimento em Todo o Brasil | Online e Presencial</div>
             </div>
         </div>
         <nav>
             <div class="logo-container">
-                <img src="https://i.postimg.cc/KYnYQF09/image.png" alt="Ribeiro Reis Advogados" class="logo">
+                <img src="https://i.postimg.cc/x1xMNqYm/Imagem-do-Whats-App-de-2025-10-19-s-01-16-26-c83d1d2a.jpg" alt="Ribeiro Reis Advogados" class="logo">
             </div>
             <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#areas">Áreas de Atuação</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#areas">Áreas de Atuação</a></li>
+                <li><a href="#casos">Casos de Sucesso</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><button class="btn-contact">Agende uma Consulta</button></li>
+                <li><button class="btn-contact" onclick="scrollToSection('contato')">Consulta Gratuita</button></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">Mais de 15 anos de experiência</div>
+            <div class="hero-badge">Mais de 20 anos defendendo concurseiros</div>
             <h1>
-                Excelência Jurídica
-                <strong>ao Seu Alcance</strong>
+                Se o seu sonho é tomar posse,
+                <strong>o nosso é garantir que nada impeça isso</strong>
             </h1>
-            <p>Advocacia especializada em concursos públicos e consultoria jurídica. Defendendo seus direitos com competência e dedicação.</p>
+            <p class="hero-subtitle">Defesa especializada em todas as fases dos concursos públicos — da inscrição à posse</p>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToSection('contato')">
-                    <span>Fale com um Advogado</span>
+                <button class="btn-primary" onclick="openWhatsApp()">
+                    <span>💬 Falar com Especialista</span>
                 </button>
-                <button class="btn-secondary" onclick="scrollToSection('areas')">Conheça Nossas Áreas</button>
+                <button class="btn-secondary" onclick="scrollToSection('areas')">Conheça Nossos Serviços</button>
             </div>
         </div>
     </section>
@@ -60,213 +63,331 @@
         <div class="stats-grid">
             <div class="stat-card animate-on-scroll">
                 <div class="stat-number" data-target="500">0</div>
-                <div class="stat-label">Casos Atendidos</div>
+                <div class="stat-label">Vitórias Definitivas</div>
             </div>
             <div class="stat-card animate-on-scroll">
-                <div class="stat-number" data-target="95">0</div>
-                <div class="stat-label">Taxa de Sucesso</div>
+                <div class="stat-number" data-target="82">0</div>
+                <div class="stat-label">Taxa de Sucesso em Liminares</div>
             </div>
             <div class="stat-card animate-on-scroll">
-                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-number" data-target="20">0</div>
                 <div class="stat-label">Anos de Experiência</div>
             </div>
             <div class="stat-card animate-on-scroll">
-                <div class="stat-number" data-target="98">0</div>
-                <div class="stat-label">Clientes Satisfeitos</div>
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Processos em Andamento</div>
             </div>
         </div>
     </section>
 
-    <section class="container" id="areas">
+    <section class="container" id="sobre">
         <div class="section-header animate-on-scroll">
-            <div class="section-badge">Nossas Especialidades</div>
-            <h2 class="section-title">Áreas de <strong>Atuação</strong></h2>
-            <p class="section-subtitle">Oferecemos soluções jurídicas completas e personalizadas em diversas áreas do direito</p>
+            <div class="section-badge">Quem Somos</div>
+            <h2 class="section-title">Defesa Técnica e Estratégica <strong>para Concurseiros</strong></h2>
+            <p class="section-subtitle">Há mais de 20 anos atuando no Direito Administrativo, o Ribeiro Reis Advocacia se tornou referência na defesa de candidatos em concursos públicos, garantindo o direito à posse e à nomeação de centenas de concursados em todo o Brasil.</p>
         </div>
 
-        <div class="areas-grid">
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">⚖</div>
-                <h3 class="area-title">Direito Administrativo</h3>
-                <p class="area-description">Assessoria completa para servidores públicos, processos administrativos e questões relacionadas ao poder público.</p>
+        <div class="about-content-grid animate-on-scroll">
+            <div class="about-card">
+                <div class="about-icon">⚖</div>
+                <h3>Compromisso com Resultados</h3>
+                <p>Nosso compromisso é assegurar que o esforço do candidato não seja perdido por erros administrativos, ilegalidades ou injustiças da banca examinadora.</p>
             </div>
-
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">📋</div>
-                <h3 class="area-title">Concursos Públicos</h3>
-                <p class="area-description">Defesa de direitos em concursos, impugnação de questões, recursos administrativos e judiciais, nomeações e posses.</p>
+            <div class="about-card">
+                <div class="about-icon">🎯</div>
+                <h3>Estratégia Personalizada</h3>
+                <p>Cada caso é único. Desenvolvemos estratégias específicas baseadas em jurisprudência atualizada e conhecimento profundo da legislação.</p>
             </div>
-
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">👨‍⚖</div>
-                <h3 class="area-title">Direito Civil</h3>
-                <p class="area-description">Soluções jurídicas para questões civis, contratos, responsabilidade civil e defesa de direitos patrimoniais.</p>
-            </div>
-
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">🏢</div>
-                <h3 class="area-title">Direito Trabalhista</h3>
-                <p class="area-description">Proteção integral dos direitos trabalhistas, ações contra empregadores e defesa em processos judiciais.</p>
-            </div>
-
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">📄</div>
-                <h3 class="area-title">Consultoria Jurídica</h3>
-                <p class="area-description">Orientação preventiva e estratégica para pessoas físicas e jurídicas, evitando litígios e garantindo segurança.</p>
-            </div>
-
-            <div class="area-card animate-on-scroll">
-                <div class="area-icon">🛡</div>
-                <h3 class="area-title">Direito Previdenciário</h3>
-                <p class="area-description">Aposentadorias, pensões, auxílios e benefícios previdenciários. Revisão de benefícios e recursos ao INSS.</p>
+            <div class="about-card">
+                <div class="about-icon">⏱</div>
+                <h3>Agilidade e Urgência</h3>
+                <p>Protocolos urgentes e pedidos liminares em regime de plantão. Sabemos que cada dia conta na defesa do seu direito.</p>
             </div>
         </div>
     </section>
 
-    <section class="about-section" id="sobre">
-        <div class="about-content-wrapper">
-            <div class="about-image-container animate-on-scroll">
-                <div class="about-image">§</div>
-                <div class="about-badge-float">
-                    <span class="number">15+</span>
-                    <span class="text">Anos de Tradição</span>
-                </div>
-            </div>
-            <div class="about-content animate-on-scroll">
-                <h2>
-                    Comprometimento com a
-                    <strong>Justiça</strong>
-                </h2>
-                <p>Há mais de 15 anos, o escritório Ribeiro Reis Advogados se dedica a oferecer serviços jurídicos de excelência, com foco especial em concursos públicos e direito administrativo.</p>
-                <p>Nossa equipe é formada por profissionais altamente qualificados, com vasta experiência em suas áreas de atuação. Acreditamos que cada caso merece atenção personalizada e estratégias específicas.</p>
-                
-                <div class="about-features">
-                    <div class="about-feature-item">
-                        <div class="about-feature-icon">✓</div>
-                        <span class="about-feature-text">Ética Profissional</span>
-                    </div>
-                    <div class="about-feature-item">
-                        <div class="about-feature-icon">✓</div>
-                        <span class="about-feature-text">Compromisso com Resultados</span>
-                    </div>
-                    <div class="about-feature-item">
-                        <div class="about-feature-icon">✓</div>
-                        <span class="about-feature-text">Atendimento Humanizado</span>
-                    </div>
-                    <div class="about-feature-item">
-                        <div class="about-feature-icon">✓</div>
-                        <span class="about-feature-text">Excelência Técnica</span>
-                    </div>
-                </div>
-
-                <button class="btn-primary" onclick="scrollToSection('contato')" style="margin-top: 30px;">
-                    <span>Entre em Contato</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="team-section" id="equipe">
+    <section class="areas-section" id="areas">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <div class="section-badge">Profissionais Dedicados</div>
-                <h2 class="section-title">Nossa <strong>Equipe</strong></h2>
-                <p class="section-subtitle">Advogados experientes e comprometidos com a defesa dos seus direitos</p>
-            </div>
-        </div>
-
-        <div class="team-grid">
-            <div class="team-card animate-on-scroll">
-                <div class="team-icon">⚖</div>
-                <h3 class="team-name">Dra. Mayara Ribeiro</h3>
-                <p class="team-role">Advogado Associado | OAB/SP 123.456</p>
-                <p class="team-description">Especialista em Direito Administrativo e Concursos Públicos com mais de 20 anos de experiência na área.</p>
+                <div class="section-badge">Nossas Especialidades</div>
+                <h2 class="section-title">Atuamos em <strong>Todas as Fases</strong></h2>
+                <p class="section-subtitle">Da análise do edital até a garantia da sua posse e estabilidade no cargo</p>
             </div>
 
-            <div class="team-card animate-on-scroll">
-                <div class="team-icon">§</div>
-                <h3 class="team-name">Dra. Mario Reis</h3>
-                <p class="team-role">Fundador | OAB/SP 234.567</p>
-                <p class="team-description">Especialista em Direito do Trabalho e Previdenciário, com atuação destacada em ações trabalhistas.</p>
+            <div class="areas-tabs">
+                <button class="tab-btn active" onclick="changeTab(0)">Fase Consultiva</button>
+                <button class="tab-btn" onclick="changeTab(1)">Fase Administrativa</button>
+                <button class="tab-btn" onclick="changeTab(2)">Fase Judicial</button>
+                <button class="tab-btn" onclick="changeTab(3)">Pós-Nomeação</button>
             </div>
 
-            <div class="team-card animate-on-scroll">
-                <div class="team-icon">⚖</div>
-                <h3 class="team-name">Dra. Vanessa Reis </h3>
-                <p class="team-role">Advogado Associado | OAB/SP 345.678</p>
-                <p class="team-description">Especialista em Direito Civil e Consultoria Jurídica, com sólida formação acadêmica e prática.</p>
+            <div class="tabs-content">
+                <!-- Tab 1: Consultiva -->
+                <div class="tab-panel active" id="tab-0">
+                    <div class="tab-layout">
+                        <div class="tab-info">
+                            <h3>🔷 Fase Consultiva</h3>
+                            <p class="tab-description">Atuação preventiva e orientativa, com foco em evitar prejuízos antes que ocorram.</p>
+                            <ul class="services-list">
+                                <li>✓ Análise de editais e requisitos de inscrição</li>
+                                <li>✓ Verificação de cláusulas restritivas ilegais</li>
+                                <li>✓ Consultoria sobre cotas, PCD e critérios de participação</li>
+                                <li>✓ Revisão de documentação para matrícula e posse</li>
+                                <li>✓ Parecer sobre acúmulo de cargos e experiência profissional</li>
+                            </ul>
+                            <button class="btn-primary" onclick="openWhatsApp()">
+                                <span>Solicitar Análise Gratuita</span>
+                            </button>
+                        </div>
+                        <div class="tab-image">
+                            <div class="image-placeholder">📋</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Administrativa -->
+                <div class="tab-panel" id="tab-1">
+                    <div class="tab-layout">
+                        <div class="tab-info">
+                            <h3>🔶 Fase Administrativa</h3>
+                            <p class="tab-description">Atuação direta perante bancas e órgãos públicos antes do processo judicial.</p>
+                            <ul class="services-list">
+                                <li>✓ Recursos administrativos contra gabaritos ou resultados</li>
+                                <li>✓ Impugnação de eliminação em provas físicas ou psicológicas</li>
+                                <li>✓ Defesa contra exclusão em investigação social</li>
+                                <li>✓ Pedidos de reclassificação ou correção de nota</li>
+                                <li>✓ Representações perante MP, CGU e TCU</li>
+                            </ul>
+                            <button class="btn-primary" onclick="openWhatsApp()">
+                                <span>Entrar com Recurso Agora</span>
+                            </button>
+                        </div>
+                        <div class="tab-image">
+                            <div class="image-placeholder">📄</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Judicial -->
+                <div class="tab-panel" id="tab-2">
+                    <div class="tab-layout">
+                        <div class="tab-info">
+                            <h3>🔴 Fase Judicial</h3>
+                            <p class="tab-description">Atuação judicial em todas as instâncias, com foco em resultados rápidos e liminares eficazes.</p>
+                            <ul class="services-list">
+                                <li>✓ Ações para anular eliminação em provas</li>
+                                <li>✓ Mandados de segurança para garantir posse</li>
+                                <li>✓ Ações de nomeação por preterição</li>
+                                <li>✓ Ações para inclusão de candidatos PCD ou cotistas</li>
+                                <li>✓ Defesa em exclusão indevida (psicotécnico, investigação)</li>
+                            </ul>
+                            <button class="btn-primary" onclick="openWhatsApp()">
+                                <span>Solicitar Mandado de Segurança</span>
+                            </button>
+                        </div>
+                        <div class="tab-image">
+                            <div class="image-placeholder">⚖</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Pós-Nomeação -->
+                <div class="tab-panel" id="tab-3">
+                    <div class="tab-layout">
+                        <div class="tab-info">
+                            <h3>🔵 Pós-Nomeação e Estágio Probatório</h3>
+                            <p class="tab-description">Atuação na proteção do servidor já nomeado.</p>
+                            <ul class="services-list">
+                                <li>✓ Defesa em PAD (Processo Administrativo Disciplinar)</li>
+                                <li>✓ Anulação de exonerações ou reprovações no estágio</li>
+                                <li>✓ Regularização de tempo de serviço e progressões</li>
+                                <li>✓ Revisão de enquadramento funcional</li>
+                                <li>✓ Garantia de estabilidade e manutenção do cargo</li>
+                            </ul>
+                            <button class="btn-primary" onclick="openWhatsApp()">
+                                <span>Proteger Minha Estabilidade</span>
+                            </button>
+                        </div>
+                        <div class="tab-image">
+                            <div class="image-placeholder">🛡</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" id="contato">
-        <div class="cta-content">
-            <h2 class="animate-on-scroll">
-                Entre em <strong>Contato</strong>
-            </h2>
-            <p class="animate-on-scroll">Estamos prontos para atender você. Agende uma consulta gratuita e conheça nossas soluções jurídicas.</p>
+    <section class="testimonials-section" id="casos">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Histórias Reais</div>
+                <h2 class="section-title">Casos de <strong>Sucesso</strong></h2>
+                <p class="section-subtitle">Veja como ajudamos centenas de concurseiros a realizarem seus sonhos</p>
+            </div>
 
-            <form class="contact-form animate-on-scroll" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <input type="text" placeholder="Nome Completo" required>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Fui eliminada no psicotécnico da PMBA e consegui minha posse graças à equipe do Ribeiro Reis. Hoje sou policial!</p>
+                    <div class="testimonial-author">
+                        <strong>Maria S.</strong>
+                        <span>Salvador/BA - PM-BA</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="E-mail" required>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Recorri da correção da minha prova discursiva com o escritório e consegui os pontos que faltavam para passar!</p>
+                    <div class="testimonial-author">
+                        <strong>João P.</strong>
+                        <span>Recife/PE - Tribunal de Justiça</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Telefone" required>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Estava sendo preterido na nomeação. Entraram com mandado de segurança e em 15 dias eu estava empossado!</p>
+                    <div class="testimonial-author">
+                        <strong>Carlos M.</strong>
+                        <span>São Paulo/SP - Receita Federal</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Assunto" required>
+            </div>
+
+            <div class="stats-highlight animate-on-scroll">
+                <div class="stat-highlight-item">
+                    <div class="stat-highlight-number">+500</div>
+                    <div class="stat-highlight-label">Vitórias Definitivas em Posse</div>
                 </div>
-                <div class="form-group full">
-                    <textarea placeholder="Descreva brevemente seu caso" required></textarea>
+                <div class="stat-highlight-item">
+                    <div class="stat-highlight-number">82%</div>
+                    <div class="stat-highlight-label">Taxa de Sucesso em Liminares</div>
                 </div>
-                <button type="submit">
-                    <span>Enviar Mensagem</span>
-                </button>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="cta-banner-content animate-on-scroll">
+            <h2>Seu direito à posse não pode esperar</h2>
+            <p>Cada edital tem prazos curtos e erros que precisam ser atacados imediatamente. Entre em contato agora e receba uma análise gratuita do seu caso.</p>
+            <button class="btn-primary large" onclick="openWhatsApp()">
+                <span>📞 Quero Falar com um Advogado Agora</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Entre em Contato</div>
+                <h2 class="section-title">Fale Direto com <strong>Nossa Equipe</strong></h2>
+                <p class="section-subtitle">Preencha o formulário ou clique no botão para falar pelo WhatsApp</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone / WhatsApp</label>
+                            <input type="tel" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Concurso / Cargo</label>
+                            <input type="text" placeholder="Ex: PM-BA / Soldado" required>
+                        </div>
+                        <div class="form-group full">
+                            <label>Descreva seu caso</label>
+                            <textarea placeholder="Ex: Fui eliminado por nota da redação..." required rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full">
+                            <span>📤 Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container animate-on-scroll">
+                    <div class="contact-info-card">
+                        <h3>Contato Direto</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📞</div>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>(71) 98765-4321</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">✉</div>
+                            <div>
+                                <strong>E-mail</strong>
+                                <p>contato@ribeiroreis.adv.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">⏰</div>
+                            <div>
+                                <strong>Horário</strong>
+                                <p>Seg - Sex: 9h às 18h<br>Sáb: 9h às 13h</p>
+                            </div>
+                        </div>
+                        <button class="btn-whatsapp" onclick="openWhatsApp()">
+                            💬 Falar no WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <img src="https://i.postimg.cc/KYnYQF09/image.png" alt="Ribeiro Reis Advogados" class="footer-logo">
+                <img src="https://i.postimg.cc/x1xMNqYm/Imagem-do-Whats-App-de-2025-10-19-s-01-16-26-c83d1d2a.jpg" alt="Ribeiro Reis Advogados" class="footer-logo">
                 <p style="color: #666; line-height: 1.8; margin-top: 15px;">
-                    Ribeiro Reis Advogados - Escritório comprometido com a excelência jurídica e satisfação dos nossos clientes.
+                    <strong>Ribeiro Reis Advocacia</strong><br>
+                    OAB/BA 45.315 – Dr. Mário César Ribeiro Reis<br>
+                    Defesa especializada em concursos públicos
                 </p>
             </div>
             <div class="footer-section">
-                <h3>Links Rápidos</h3>
+                <h3>Navegação</h3>
                 <ul>
                     <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#areas">Áreas de Atuação</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#casos">Casos de Sucesso</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Áreas</h3>
+                <h3>Áreas de Atuação</h3>
                 <ul>
-                    <li><a href="#areas">Direito Administrativo</a></li>
-                    <li><a href="#areas">Concursos Públicos</a></li>
-                    <li><a href="#areas">Direito Civil</a></li>
-                    <li><a href="#areas">Direito Trabalhista</a></li>
+                    <li><a href="#areas">Fase Consultiva</a></li>
+                    <li><a href="#areas">Fase Administrativa</a></li>
+                    <li><a href="#areas">Fase Judicial</a></li>
+                    <li><a href="#areas">Pós-Nomeação</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
                 <ul>
-                    <li><a href="tel:1134567890">(71) 94002-8922</a></li>
-                    <li><a href="mailto:contato@ribeiroreisadvogados.com.br">contato@ribeiroreisadvogados.com.br</a></li>
-                    <li style="margin-top: 20px; color: #666;">Seg - Sex: 9h às 18h</li>
-                    <li style="color: #666;">Sáb: 9h às 13h</li>
+                    <li><a href="tel:71987654321">(71) 98765-4321</a></li>
+                    <li><a href="mailto:contato@ribeiroreis.adv.br">contato@ribeiroreis.adv.br</a></li>
+                    <li style="margin-top: 20px; color: #666;">Atendimento em Todo o Brasil</li>
+                    <li style="color: #666;">Online e Presencial</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Ribeiro Reis Advogados. Todos os direitos reservados. | Desenvolvido por IkarusRK</p>
+            <p>&copy; 2025 Ribeiro Reis Advocacia. Todos os direitos reservados. | Desenvolvido por IkarusRK</p>
         </div>
     </footer>
 
