@@ -1,142 +1,133 @@
-// Alternar menu mobile (abre/fecha)
-function alternarMenu() {
+
+// Toggle Mobile Menu
+function toggleMenu() {
     const menu = document.getElementById('navMenu');
-    menu.classList.toggle('ativo');
+    menu.classList.toggle('active');
 }
 
-// Fechar menu ao clicar fora
-document.addEventListener('click', function (evento) {
+// Close menu when clicking outside
+document.addEventListener('click', function (event) {
     const menu = document.getElementById('navMenu');
-    const botaoMenu = document.querySelector('.mobile-menu-btn');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
 
-    if (!menu.contains(evento.target) && !botaoMenu.contains(evento.target)) {
-        menu.classList.remove('ativo');
+    if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+        menu.classList.remove('active');
     }
 });
 
-// Rolagem suave até uma seção
-function rolarParaSecao(idSecao) {
-    const secao = document.getElementById(idSecao);
-    if (secao) {
-        secao.scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('navMenu').classList.remove('ativo');
+// Scroll to section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('navMenu').classList.remove('active');
     }
 }
 
-// Rolagem suave para todos os links âncora
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const alvoId = this.getAttribute('href').substring(1);
-        rolarParaSecao(alvoId);
+        const targetId = this.getAttribute('href').substring(1);
+        scrollToSection(targetId);
     });
 });
 
-// Efeito no cabeçalho ao rolar a página
+// Header scroll effect
 window.addEventListener('scroll', function () {
-    const cabecalho = document.getElementById('header');
+    const header = document.getElementById('header');
     if (window.scrollY > 50) {
-        cabecalho.classList.add('rolado');
+        header.classList.add('scrolled');
     } else {
-        cabecalho.classList.remove('rolado');
+        header.classList.remove('scrolled');
     }
 });
 
-// Animação ao rolar (revela elementos)
-const opcoesObservador = {
+// Animate on scroll
+const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observador = new IntersectionObserver(function (entradas) {
-    entradas.forEach(entrada => {
-        if (entrada.isIntersecting) {
-            entrada.target.classList.add('ativo');
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
         }
     });
-}, opcoesObservador);
+}, observerOptions);
 
-// Observar todos os elementos com classe 'animate-on-scroll'
-document.querySelectorAll('.animate-on-scroll').forEach(elemento => {
-    observador.observe(elemento);
+// Observe all elements with animate-on-scroll class
+document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    observer.observe(element);
 });
 
-// Animação de contador (ex: números de estatísticas)
-function animarContador(elemento) {
-    const alvo = parseInt(elemento.getAttribute('data-target'));
-    const duracao = 2000;
-    const incremento = alvo / (duracao / 16);
-    let atual = 0;
+// Counter animation for stats
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
 
-    const atualizarContador = () => {
-        atual += incremento;
-        if (atual < alvo) {
-            elemento.textContent = Math.floor(atual) + (alvo > 90 ? '%' : '+');
-            requestAnimationFrame(atualizarContador);
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current) + (target > 90 ? '%' : '+');
+            requestAnimationFrame(updateCounter);
         } else {
-            elemento.textContent = alvo + (alvo > 90 ? '%' : '+');
+            element.textContent = target + (target > 90 ? '%' : '+');
         }
     };
 
-    atualizarContador();
+    updateCounter();
 }
 
-const observadorEstatisticas = new IntersectionObserver(function (entradas) {
-    entradas.forEach(entrada => {
-        if (entrada.isIntersecting) {
-            const contadores = entrada.target.querySelectorAll('.stat-number');
-            contadores.forEach(contador => {
-                animarContador(contador);
+const statsObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                animateCounter(counter);
             });
-            observadorEstatisticas.unobserve(entrada.target);
+            statsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
-const secaoEstatisticas = document.querySelector('.stats-section');
-if (secaoEstatisticas) {
-    observadorEstatisticas.observe(secaoEstatisticas);
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+    statsObserver.observe(statsSection);
 }
 
-// Envio do formulário de contato
-async function enviarFormulario(evento) {
-    evento.preventDefault();
+function handleSubmit(event) {
+    event.preventDefault();
 
-    const formulario = evento.target;
-    const dadosFormulario = new FormData(formulario);
+    const form = event.target;
+    const formData = new FormData(form);
 
-    try {
-        // Exemplo de envio para uma API
-        const resposta = await fetch('/api/contato', {
-            method: 'POST',
-            body: dadosFormulario
-        });
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
 
-        if (resposta.ok) {
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            formulario.reset();
-        } else {
-            alert('Ocorreu um erro ao enviar sua mensagem. Tente novamente.');
-        }
+    form.reset();
 
-    } catch (erro) {
-        console.error('Erro ao enviar formulário:', erro);
-        alert('Falha de conexão com o servidor.');
-    }
+
+    // fetch('/api/contact', {
+    //     method: 'POST',
+    //     body: formData
+    // });
 }
 
-// Fechar menu se a tela for redimensionada para desktop
+// Resize handler
 window.addEventListener('resize', function () {
     if (window.innerWidth > 768) {
-        document.getElementById('navMenu').classList.remove('ativo');
+        document.getElementById('navMenu').classList.remove('active');
     }
 });
 
-// Impedir rolagem da página quando o menu mobile está aberto
-const menuNavegacao = document.getElementById('navMenu');
-const observadorMenu = new MutationObserver(function (mutacoes) {
-    mutacoes.forEach(function (mutacao) {
-        if (mutacao.target.classList.contains('ativo')) {
+// Prevent scroll when mobile menu is open
+const navMenu = document.getElementById('navMenu');
+const observer2 = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+        if (mutation.target.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
@@ -144,7 +135,7 @@ const observadorMenu = new MutationObserver(function (mutacoes) {
     });
 });
 
-observadorMenu.observe(menuNavegacao, {
+observer2.observe(navMenu, {
     attributes: true,
     attributeFilter: ['class']
 });
