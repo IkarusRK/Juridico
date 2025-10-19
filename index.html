@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribeiro Reis Advogados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>(71) 94002-8922</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉</span>
+                        <span>contato@ribeiroreisadvogados.com.br</span>
+                    </div>
+                </div>
+                <div>Atendimento: Seg - Sex, 9h às 18h</div>
+            </div>
+        </div>
+        <nav>
+            <div class="logo-container">
+                <img src="https://i.postimg.cc/KYnYQF09/image.png" alt="Ribeiro Reis Advogados" class="logo">
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#areas">Áreas de Atuação</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button class="btn-contact">Agende uma Consulta</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">Mais de 15 anos de experiência</div>
+            <h1>
+                Excelência Jurídica
+                <strong>ao Seu Alcance</strong>
+            </h1>
+            <p>Advocacia especializada em concursos públicos e consultoria jurídica. Defendendo seus direitos com competência e dedicação.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('contato')">
+                    <span>Fale com um Advogado</span>
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('areas')">Conheça Nossas Áreas</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Casos Atendidos</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-label">Taxa de Sucesso</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="areas">
+        <div class="section-header animate-on-scroll">
+            <div class="section-badge">Nossas Especialidades</div>
+            <h2 class="section-title">Áreas de <strong>Atuação</strong></h2>
+            <p class="section-subtitle">Oferecemos soluções jurídicas completas e personalizadas em diversas áreas do direito</p>
+        </div>
+
+        <div class="areas-grid">
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">⚖</div>
+                <h3 class="area-title">Direito Administrativo</h3>
+                <p class="area-description">Assessoria completa para servidores públicos, processos administrativos e questões relacionadas ao poder público.</p>
+            </div>
+
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">📋</div>
+                <h3 class="area-title">Concursos Públicos</h3>
+                <p class="area-description">Defesa de direitos em concursos, impugnação de questões, recursos administrativos e judiciais, nomeações e posses.</p>
+            </div>
+
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">👨‍⚖</div>
+                <h3 class="area-title">Direito Civil</h3>
+                <p class="area-description">Soluções jurídicas para questões civis, contratos, responsabilidade civil e defesa de direitos patrimoniais.</p>
+            </div>
+
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">🏢</div>
+                <h3 class="area-title">Direito Trabalhista</h3>
+                <p class="area-description">Proteção integral dos direitos trabalhistas, ações contra empregadores e defesa em processos judiciais.</p>
+            </div>
+
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">📄</div>
+                <h3 class="area-title">Consultoria Jurídica</h3>
+                <p class="area-description">Orientação preventiva e estratégica para pessoas físicas e jurídicas, evitando litígios e garantindo segurança.</p>
+            </div>
+
+            <div class="area-card animate-on-scroll">
+                <div class="area-icon">🛡</div>
+                <h3 class="area-title">Direito Previdenciário</h3>
+                <p class="area-description">Aposentadorias, pensões, auxílios e benefícios previdenciários. Revisão de benefícios e recursos ao INSS.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+        <div class="about-content-wrapper">
+            <div class="about-image-container animate-on-scroll">
+                <div class="about-image">§</div>
+                <div class="about-badge-float">
+                    <span class="number">15+</span>
+                    <span class="text">Anos de Tradição</span>
+                </div>
+            </div>
+            <div class="about-content animate-on-scroll">
+                <h2>
+                    Comprometimento com a
+                    <strong>Justiça</strong>
+                </h2>
+                <p>Há mais de 15 anos, o escritório Ribeiro Reis Advogados se dedica a oferecer serviços jurídicos de excelência, com foco especial em concursos públicos e direito administrativo.</p>
+                <p>Nossa equipe é formada por profissionais altamente qualificados, com vasta experiência em suas áreas de atuação. Acreditamos que cada caso merece atenção personalizada e estratégias específicas.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">✓</div>
+                        <span class="about-feature-text">Ética Profissional</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">✓</div>
+                        <span class="about-feature-text">Compromisso com Resultados</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">✓</div>
+                        <span class="about-feature-text">Atendimento Humanizado</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon">✓</div>
+                        <span class="about-feature-text">Excelência Técnica</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="scrollToSection('contato')" style="margin-top: 30px;">
+                    <span>Entre em Contato</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" id="equipe">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Profissionais Dedicados</div>
+                <h2 class="section-title">Nossa <strong>Equipe</strong></h2>
+                <p class="section-subtitle">Advogados experientes e comprometidos com a defesa dos seus direitos</p>
+            </div>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card animate-on-scroll">
+                <div class="team-icon">⚖</div>
+                <h3 class="team-name">Dr. João Ribeiro</h3>
+                <p class="team-role">Sócio Fundador | OAB/SP 123.456</p>
+                <p class="team-description">Especialista em Direito Administrativo e Concursos Públicos com mais de 20 anos de experiência na área.</p>
+            </div>
+
+            <div class="team-card animate-on-scroll">
+                <div class="team-icon">§</div>
+                <h3 class="team-name">Dra. Maria Reis</h3>
+                <p class="team-role">Sócia | OAB/SP 234.567</p>
+                <p class="team-description">Especialista em Direito do Trabalho e Previdenciário, com atuação destacada em ações trabalhistas.</p>
+            </div>
+
+            <div class="team-card animate-on-scroll">
+                <div class="team-icon">⚖</div>
+                <h3 class="team-name">Dr. Carlos Santos</h3>
+                <p class="team-role">Advogado Associado | OAB/SP 345.678</p>
+                <p class="team-description">Especialista em Direito Civil e Consultoria Jurídica, com sólida formação acadêmica e prática.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+        <div class="cta-content">
+            <h2 class="animate-on-scroll">
+                Entre em <strong>Contato</strong>
+            </h2>
+            <p class="animate-on-scroll">Estamos prontos para atender você. Agende uma consulta gratuita e conheça nossas soluções jurídicas.</p>
+
+            <form class="contact-form animate-on-scroll" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Nome Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Telefone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+                <div class="form-group full">
+                    <textarea placeholder="Descreva brevemente seu caso" required></textarea>
+                </div>
+                <button type="submit">
+                    <span>Enviar Mensagem</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.postimg.cc/KYnYQF09/image.png" alt="Ribeiro Reis Advogados" class="footer-logo">
+                <p style="color: #666; line-height: 1.8; margin-top: 15px;">
+                    Ribeiro Reis Advogados - Escritório comprometido com a excelência jurídica e satisfação dos nossos clientes.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#areas">Áreas de Atuação</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Áreas</h3>
+                <ul>
+                    <li><a href="#areas">Direito Administrativo</a></li>
+                    <li><a href="#areas">Concursos Públicos</a></li>
+                    <li><a href="#areas">Direito Civil</a></li>
+                    <li><a href="#areas">Direito Trabalhista</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="tel:1134567890">(71) 94002-8922</a></li>
+                    <li><a href="mailto:contato@ribeiroreisadvogados.com.br">contato@ribeiroreisadvogados.com.br</a></li>
+                    <li style="margin-top: 20px; color: #666;">Seg - Sex: 9h às 18h</li>
+                    <li style="color: #666;">Sáb: 9h às 13h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ribeiro Reis Advogados. Todos os direitos reservados. | Desenvolvido por IkarusRK</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
